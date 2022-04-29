@@ -9,11 +9,11 @@ interface WeatherInfraService {
     @GET("location/search/")
     suspend fun getCities(
         @Query("query") query: String
-    )
+    ): List<CityResponse>
 
     @GET("location/{woeid}/")
     suspend fun getCityWeather(
         @Path("woeid") woeid: Int
-    )
+    ) : List<ConsolidatedWeather>
 
 }

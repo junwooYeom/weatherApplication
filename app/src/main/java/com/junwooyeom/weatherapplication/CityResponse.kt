@@ -7,10 +7,8 @@ data class CityResponse(
     val title: String,
     @SerializedName("location_type")
     val locationType: String,
-    @SerializedName("latt_long")
-    val latLng : Float,
     @SerializedName("woeid")
     val id: Int,
-    @SerializedName("distance")
-    val meters: Int
+    @SerializedName("latt_long")
+    val latLng : Float,
 )
