@@ -14,6 +14,6 @@ interface WeatherInfraService {
     @GET("location/{woeid}/")
     suspend fun getCityWeather(
         @Path("woeid") woeid: Int
-    ) : List<ConsolidatedWeather>
+    ) : ConsolidatedWeatherResponse
 
 }

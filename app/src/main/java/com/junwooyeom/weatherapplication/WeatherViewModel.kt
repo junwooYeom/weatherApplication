@@ -17,7 +17,7 @@ class WeatherViewModel @Inject constructor(
 
     fun getWeather() {
         viewModelScope.launch(Dispatchers.IO) {
-            liveData.value = getWeatherUseCase()
+            liveData.postValue(getWeatherUseCase())
         }
     }
 

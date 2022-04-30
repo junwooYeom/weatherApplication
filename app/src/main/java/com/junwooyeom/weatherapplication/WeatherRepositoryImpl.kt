@@ -9,6 +9,6 @@ class WeatherRepositoryImpl @Inject constructor(
         infraService.getCities("se")
 
 
-    override suspend fun getWeatherCity(woeId: Int): List<ConsolidatedWeather> =
-        infraService.getCityWeather(woeId)
+    override suspend fun getWeatherCity(woeId: Int): List<WeatherDto> =
+        infraService.getCityWeather(woeId).consolidatedWeather
 }

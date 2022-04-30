@@ -2,9 +2,9 @@ package com.junwooyeom.weatherapplication
 
 import com.google.gson.annotations.SerializedName
 
-data class ConsolidatedWeather(
+data class WeatherDto(
     @SerializedName("id")
-    val id: Int,
+    val id: Long,
     @SerializedName("weather_state_name")
     val weatherStateName: String,
     @SerializedName("weather_state_abbr")
@@ -14,11 +14,11 @@ data class ConsolidatedWeather(
     @SerializedName("applicable_date")
     val applicable_date: String,
     @SerializedName("min_temp")
-    val minTemperature: Float,
+    val minTemperature: Double,
     @SerializedName("max_temp")
-    val maxTemperature: Float,
+    val maxTemperature: Double,
     @SerializedName("the_temp")
-    val theTemperature: Float,
+    val theTemperature: Double,
     @SerializedName("wind_speed")
     val windSpeed: Double,
     @SerializedName("wind_direction")

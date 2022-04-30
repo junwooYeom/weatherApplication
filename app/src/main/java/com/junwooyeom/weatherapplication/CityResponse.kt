@@ -10,5 +10,5 @@ data class CityResponse(
     @SerializedName("woeid")
     val id: Int,
     @SerializedName("latt_long")
-    val latLng : Float,
+    val latLng : String,
 )
