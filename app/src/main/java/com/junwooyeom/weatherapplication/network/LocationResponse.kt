@@ -2,7 +2,7 @@ package com.junwooyeom.weatherapplication.network
 
 import com.google.gson.annotations.SerializedName
 
-data class CityResponse(
+data class LocationResponse(
     @SerializedName("title")
     val title: String,
     @SerializedName("location_type")

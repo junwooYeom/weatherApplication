@@ -1,10 +1,10 @@
 package com.junwooyeom.weatherapplication.domain.repository
 
-import com.junwooyeom.weatherapplication.network.CityResponse
-import com.junwooyeom.weatherapplication.network.WeatherDto
+import com.junwooyeom.weatherapplication.domain.model.Location
+import com.junwooyeom.weatherapplication.domain.model.Weather
 
 interface WeatherRepository {
-    suspend fun getWeather(): List<CityResponse>
+    suspend fun getWeather(): List<Location>
 
-    suspend fun getWeatherCity(woeId: Int): List<WeatherDto>
+    suspend fun getWeatherCity(woeId: Int): List<Weather>
 }
