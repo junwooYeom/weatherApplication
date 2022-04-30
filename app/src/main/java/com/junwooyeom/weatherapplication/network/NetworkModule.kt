@@ -1,5 +1,6 @@
 package com.junwooyeom.weatherapplication.network
 
+import com.junwooyeom.weatherapplication.network.infraservice.WeatherInfraService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

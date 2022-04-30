@@ -1,4 +1,4 @@
-package com.junwooyeom.weatherapplication.network
+package com.junwooyeom.weatherapplication.network.model.dto
 
 import com.google.gson.annotations.SerializedName
 

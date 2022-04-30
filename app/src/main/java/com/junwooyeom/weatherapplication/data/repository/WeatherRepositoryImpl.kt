@@ -4,7 +4,7 @@ import com.junwooyeom.weatherapplication.data.toWeather
 import com.junwooyeom.weatherapplication.domain.model.Location
 import com.junwooyeom.weatherapplication.domain.model.Weather
 import com.junwooyeom.weatherapplication.domain.repository.WeatherRepository
-import com.junwooyeom.weatherapplication.network.WeatherInfraService
+import com.junwooyeom.weatherapplication.network.infraservice.WeatherInfraService
 import javax.inject.Inject
 
 class WeatherRepositoryImpl @Inject constructor(

@@ -1,7 +1,7 @@
 package com.junwooyeom.weatherapplication.data
 
 import com.junwooyeom.weatherapplication.domain.model.Weather
-import com.junwooyeom.weatherapplication.network.WeatherDto
+import com.junwooyeom.weatherapplication.network.model.dto.WeatherDto
 
 fun WeatherDto.toWeather(): Weather =
     Weather(
