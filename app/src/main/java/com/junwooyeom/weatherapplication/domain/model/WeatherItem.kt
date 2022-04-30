@@ -1,4 +1,4 @@
-package com.junwooyeom.weatherapplication.domain
+package com.junwooyeom.weatherapplication.domain.model
 
 import com.junwooyeom.weatherapplication.network.WeatherDto
 

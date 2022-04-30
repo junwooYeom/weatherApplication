@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.junwooyeom.weatherapplication.domain.WeatherItem
+import com.junwooyeom.weatherapplication.domain.model.WeatherItem
 import com.junwooyeom.weatherapplication.databinding.ItemWeatherBinding
 
 class WeatherAdapter : ListAdapter<WeatherItem, WeatherAdapter.ViewHolder>(weatherAdapter){

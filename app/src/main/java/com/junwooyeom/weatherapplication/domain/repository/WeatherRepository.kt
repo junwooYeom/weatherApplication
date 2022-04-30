@@ -1,4 +1,4 @@
-package com.junwooyeom.weatherapplication.domain
+package com.junwooyeom.weatherapplication.domain.repository
 
 import com.junwooyeom.weatherapplication.network.CityResponse
 import com.junwooyeom.weatherapplication.network.WeatherDto

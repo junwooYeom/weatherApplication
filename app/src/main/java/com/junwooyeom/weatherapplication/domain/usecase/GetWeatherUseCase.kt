@@ -1,5 +1,7 @@
-package com.junwooyeom.weatherapplication.domain
+package com.junwooyeom.weatherapplication.domain.usecase
 
+import com.junwooyeom.weatherapplication.domain.repository.WeatherRepository
+import com.junwooyeom.weatherapplication.domain.model.WeatherItem
 import javax.inject.Inject
 
 class GetWeatherUseCase @Inject constructor(

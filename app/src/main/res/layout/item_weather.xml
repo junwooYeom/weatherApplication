@@ -3,7 +3,7 @@
     <data>
         <variable
             name="weather"
-            type="com.junwooyeom.weatherapplication.domain.WeatherItem"/>
+            type="com.junwooyeom.weatherapplication.domain.model.WeatherItem"/>
     </data>
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"

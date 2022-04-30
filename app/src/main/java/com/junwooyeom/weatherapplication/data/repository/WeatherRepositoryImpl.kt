@@ -1,6 +1,6 @@
-package com.junwooyeom.weatherapplication.data
+package com.junwooyeom.weatherapplication.data.repository
 
-import com.junwooyeom.weatherapplication.domain.WeatherRepository
+import com.junwooyeom.weatherapplication.domain.repository.WeatherRepository
 import com.junwooyeom.weatherapplication.network.CityResponse
 import com.junwooyeom.weatherapplication.network.WeatherDto
 import com.junwooyeom.weatherapplication.network.WeatherInfraService
