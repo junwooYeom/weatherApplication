@@ -5,7 +5,7 @@ import androidx.databinding.BindingAdapter
 
 object BindingAdapter {
 
-    private const val IMAGE_URL = "https://www.metaweather.com/static/img/weather/%s.svg"
+    private const val IMAGE_URL = "https://www.metaweather.com/static/img/weather/png/64/%s.png"
 
     @BindingAdapter("imageItem")
     @JvmStatic

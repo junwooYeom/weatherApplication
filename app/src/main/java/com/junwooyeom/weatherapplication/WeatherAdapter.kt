@@ -21,7 +21,7 @@ class WeatherAdapter : ListAdapter<WeatherItem, WeatherAdapter.ViewHolder>(weath
         private val binding: ItemWeatherBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: WeatherItem) {
-            binding.weatherItem = item
+            binding.weather = item
         }
     }
 

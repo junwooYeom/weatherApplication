@@ -21,7 +21,8 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun providesInfraService(retrofit: Retrofit): WeatherInfraService = retrofit.create(WeatherInfraService::class.java)
+    fun providesInfraService(retrofit: Retrofit): WeatherInfraService =
+        retrofit.create(WeatherInfraService::class.java)
 
     private companion object {
         const val BASE_URL = "https://www.metaweather.com/api/"
