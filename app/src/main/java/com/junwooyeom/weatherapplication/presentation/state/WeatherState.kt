@@ -1,4 +1,4 @@
-package com.junwooyeom.weatherapplication.presentation
+package com.junwooyeom.weatherapplication.presentation.state
 
 import com.junwooyeom.weatherapplication.domain.model.WeatherItem
 

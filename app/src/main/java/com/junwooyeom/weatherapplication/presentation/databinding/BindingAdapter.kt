@@ -1,4 +1,4 @@
-package com.junwooyeom.weatherapplication.presentation
+package com.junwooyeom.weatherapplication.presentation.databinding
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter

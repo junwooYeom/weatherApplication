@@ -1,4 +1,4 @@
-package com.junwooyeom.weatherapplication.presentation
+package com.junwooyeom.weatherapplication.presentation.state
 
 sealed class WeatherIntent {
     object InitFetch: WeatherIntent()

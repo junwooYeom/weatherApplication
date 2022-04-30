@@ -1,4 +1,4 @@
-package com.junwooyeom.weatherapplication.presentation
+package com.junwooyeom.weatherapplication.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

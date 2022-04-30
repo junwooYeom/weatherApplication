@@ -1,4 +1,4 @@
-package com.junwooyeom.weatherapplication.presentation
+package com.junwooyeom.weatherapplication.presentation.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +11,10 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.junwooyeom.weatherapplication.R
 import com.junwooyeom.weatherapplication.databinding.ActivityMainBinding
+import com.junwooyeom.weatherapplication.presentation.adapter.WeatherAdapter
+import com.junwooyeom.weatherapplication.presentation.state.WeatherIntent
+import com.junwooyeom.weatherapplication.presentation.viewmodel.WeatherViewModel
+import com.junwooyeom.weatherapplication.presentation.state.WeatherState
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
