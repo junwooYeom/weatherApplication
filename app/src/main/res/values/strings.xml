@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">weatherApplication</string>
+
+    <string name="iv_description">weather_icon</string>
 </resources>
