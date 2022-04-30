@@ -1,5 +1,9 @@
-package com.junwooyeom.weatherapplication
+package com.junwooyeom.weatherapplication.data
 
+import com.junwooyeom.weatherapplication.domain.WeatherRepository
+import com.junwooyeom.weatherapplication.network.CityResponse
+import com.junwooyeom.weatherapplication.network.WeatherDto
+import com.junwooyeom.weatherapplication.network.WeatherInfraService
 import javax.inject.Inject
 
 class WeatherRepositoryImpl @Inject constructor(

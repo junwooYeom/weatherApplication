@@ -1,10 +1,11 @@
-package com.junwooyeom.weatherapplication
+package com.junwooyeom.weatherapplication.presentation
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.junwooyeom.weatherapplication.domain.GetWeatherUseCase
+import com.junwooyeom.weatherapplication.presentation.WeatherIntent
+import com.junwooyeom.weatherapplication.presentation.WeatherState
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

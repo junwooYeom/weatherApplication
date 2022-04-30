@@ -1,4 +1,4 @@
-package com.junwooyeom.weatherapplication
+package com.junwooyeom.weatherapplication.domain
 
 import javax.inject.Inject
 

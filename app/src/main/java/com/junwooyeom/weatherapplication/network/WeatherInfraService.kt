@@ -1,5 +1,7 @@
-package com.junwooyeom.weatherapplication
+package com.junwooyeom.weatherapplication.network
 
+import com.junwooyeom.weatherapplication.network.CityResponse
+import com.junwooyeom.weatherapplication.network.ConsolidatedWeatherResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

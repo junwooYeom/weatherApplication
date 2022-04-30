@@ -1,4 +1,6 @@
-package com.junwooyeom.weatherapplication
+package com.junwooyeom.weatherapplication.presentation
+
+import com.junwooyeom.weatherapplication.domain.WeatherItem
 
 sealed class WeatherState {
     object Idle: WeatherState()

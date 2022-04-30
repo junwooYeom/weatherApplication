@@ -1,4 +1,4 @@
-package com.junwooyeom.weatherapplication
+package com.junwooyeom.weatherapplication.network
 
 import dagger.Module
 import dagger.Provides

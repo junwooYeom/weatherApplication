@@ -1,4 +1,6 @@
-package com.junwooyeom.weatherapplication
+package com.junwooyeom.weatherapplication.domain
+
+import com.junwooyeom.weatherapplication.network.WeatherDto
 
 data class WeatherItem(
     val cityName: String,

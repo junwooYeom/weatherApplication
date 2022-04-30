@@ -1,7 +1,8 @@
-package com.junwooyeom.weatherapplication
+package com.junwooyeom.weatherapplication.presentation
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
+import com.junwooyeom.weatherapplication.GlideApp
 
 object BindingAdapter {
 
