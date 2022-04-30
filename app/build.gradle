@@ -49,6 +49,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$appCompat"
     implementation "com.google.android.material:material:$materialComponents"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayout"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipeRefreshLayout"
 
     // test implementation
     testImplementation "junit:junit:$junit"

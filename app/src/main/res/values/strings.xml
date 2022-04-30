@@ -7,4 +7,6 @@
 
     <string name="text_degree">%d\u2103</string>
     <string name="text_percentage">%d%%</string>
+
+    <string name="state_error">날씨를 가져오는데 실패했습니다. Refresh 를 진행해주세요.</string>
 </resources>

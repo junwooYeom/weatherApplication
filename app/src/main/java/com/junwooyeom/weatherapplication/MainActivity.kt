@@ -2,6 +2,9 @@ package com.junwooyeom.weatherapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -30,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         initRecyclerView()
         subscribeFlow()
+        initListeners()
     }
 
     private fun initRecyclerView() {
@@ -43,18 +47,39 @@ class MainActivity : AppCompatActivity() {
     private fun subscribeFlow() {
         lifecycleScope.launch {
             viewModel.state.collect {
-                when(it) {
-                    is WeatherState.Idle -> Unit
-                    is WeatherState.Loading -> Unit // progressBar 로딩
-                    is WeatherState.Refreshing -> Unit // swipeRefreshLayout 바 로딩
+                when (it) {
+                    is WeatherState.Idle -> {
+                        Log.d("MyTag", "Idle")
+                    }
+                    is WeatherState.Loading -> {
+                        Log.d("MyTag", "Loading")
+                        binding.progressBar.visibility = View.VISIBLE
+                    }
+                    is WeatherState.Refreshing -> {
+                        binding.layoutRefresh.isRefreshing = true
+                    }
                     is WeatherState.Weathers -> {
-                        // progressBar & SwipeRefreshLayout 뷰 GONE
+                        binding.layoutRefresh.isRefreshing = false
+                        binding.progressBar.visibility = View.GONE
                         adapter.submitList(it.weather)
                     }
                     is WeatherState.Error -> {
-                        // handle Error
+                        binding.layoutRefresh.isRefreshing = false
+                        Toast.makeText(
+                            this@MainActivity,
+                            getString(R.string.state_error),
+                            Toast.LENGTH_SHORT).show()
                     }
                 }
+            }
+            viewModel.weatherIntent.send(WeatherIntent.InitFetch)
+        }
+    }
+
+    private fun initListeners() {
+        binding.layoutRefresh.setOnRefreshListener {
+            lifecycleScope.launch {
+                viewModel.weatherIntent.send(WeatherIntent.RefreshFetch)
             }
         }
     }

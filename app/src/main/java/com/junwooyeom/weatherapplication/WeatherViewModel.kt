@@ -23,20 +23,26 @@ class WeatherViewModel @Inject constructor(
     val state: StateFlow<WeatherState>
         get() = _state
 
-    val liveData: MutableLiveData<List<WeatherItem>> = MutableLiveData()
+    init {
+        handleIntent()
+    }
 
-    fun handleIntent() {
+    private fun handleIntent() {
         viewModelScope.launch {
             weatherIntent.consumeAsFlow().collect {
                 when (it) {
-                    is WeatherIntent.InitFetch -> getWeather(true)
+                    is WeatherIntent.InitFetch -> {
+                        if (state.value != WeatherState.Loading) {
+                            getWeather(true)
+                        }
+                    }
                     is WeatherIntent.RefreshFetch -> getWeather(false)
                 }
             }
         }
     }
 
-    fun getWeather(isFirst: Boolean) {
+    private fun getWeather(isFirst: Boolean) {
         viewModelScope.launch {
             _state.value = if (isFirst) WeatherState.Loading else WeatherState.Refreshing
             _state.value = try {
