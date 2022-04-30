@@ -2,4 +2,6 @@
     <string name="app_name">weatherApplication</string>
 
     <string name="iv_description">weather_icon</string>
+
+    <string name="title_name">Local Weather</string>
 </resources>
