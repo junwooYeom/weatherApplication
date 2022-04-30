@@ -142,5 +142,9 @@
 
         </LinearLayout>
 
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+
     </LinearLayout>
 </layout>

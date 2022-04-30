@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity() {
             viewModel.state.collect {
                 when (it) {
                     is WeatherState.Idle -> {
+                        viewModel.weatherIntent.send(WeatherIntent.InitFetch)
                     }
                     is WeatherState.Loading -> {
                         binding.progressBar.visibility = View.VISIBLE
@@ -75,7 +76,6 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-            viewModel.weatherIntent.send(WeatherIntent.InitFetch)
         }
     }
 
