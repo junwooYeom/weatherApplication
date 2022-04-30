@@ -2,7 +2,7 @@ package com.junwooyeom.weatherapplication.presentation.databinding
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
-import com.junwooyeom.weatherapplication.GlideApp
+import com.junwooyeom.weatherapplication.presentation.GlideApp
 
 object BindingAdapter {
 

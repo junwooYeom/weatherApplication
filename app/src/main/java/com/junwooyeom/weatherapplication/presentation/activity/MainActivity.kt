@@ -54,10 +54,8 @@ class MainActivity : AppCompatActivity() {
             viewModel.state.collect {
                 when (it) {
                     is WeatherState.Idle -> {
-                        Log.d("MyTag", "Idle")
                     }
                     is WeatherState.Loading -> {
-                        Log.d("MyTag", "Loading")
                         binding.progressBar.visibility = View.VISIBLE
                     }
                     is WeatherState.Refreshing -> {

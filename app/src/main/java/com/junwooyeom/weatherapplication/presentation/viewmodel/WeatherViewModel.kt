@@ -32,11 +32,7 @@ class WeatherViewModel @Inject constructor(
         viewModelScope.launch {
             weatherIntent.consumeAsFlow().collect {
                 when (it) {
-                    is WeatherIntent.InitFetch -> {
-                        if (state.value != WeatherState.Loading) {
-                            getWeather(true)
-                        }
-                    }
+                    is WeatherIntent.InitFetch -> getWeather(true)
                     is WeatherIntent.RefreshFetch -> getWeather(false)
                 }
             }
@@ -45,11 +41,13 @@ class WeatherViewModel @Inject constructor(
 
     private fun getWeather(isFirst: Boolean) {
         viewModelScope.launch {
-            _state.value = if (isFirst) WeatherState.Loading else WeatherState.Refreshing
-            _state.value = try {
-                WeatherState.Weathers(getWeatherUseCase())
-            } catch (e: Exception) {
-                WeatherState.Error(e.localizedMessage)
+            if (state.value != WeatherState.Loading) {
+                _state.value = if (isFirst) WeatherState.Loading else WeatherState.Refreshing
+                try {
+                    _state.value = WeatherState.Weathers(getWeatherUseCase())
+                } catch (e: Exception) {
+                    _state.value = WeatherState.Error(e.localizedMessage)
+                }
             }
         }
     }
