@@ -24,6 +24,8 @@ ext {
     retrofit = "2.9.0"
 
     glide = "4.13.0"
+
+    activity = "1.4.0"
 }
 
 task clean(type: Delete) {
