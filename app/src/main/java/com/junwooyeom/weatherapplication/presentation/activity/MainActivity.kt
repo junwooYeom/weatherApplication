@@ -57,17 +57,21 @@ class MainActivity : AppCompatActivity() {
                         viewModel.weatherIntent.send(WeatherIntent.InitFetch)
                     }
                     is WeatherState.Loading -> {
+                        binding.rvWeather.visibility = View.GONE
                         binding.progressBar.visibility = View.VISIBLE
                     }
                     is WeatherState.Refreshing -> {
                         binding.layoutRefresh.isRefreshing = true
                     }
                     is WeatherState.Weathers -> {
+                        binding.rvWeather.visibility = View.VISIBLE
                         binding.layoutRefresh.isRefreshing = false
                         binding.progressBar.visibility = View.GONE
                         adapter.submitList(it.weather)
                     }
                     is WeatherState.Error -> {
+                        binding.rvWeather.visibility = View.GONE
+                        binding.progressBar.visibility = View.GONE
                         binding.layoutRefresh.isRefreshing = false
                         Toast.makeText(
                             this@MainActivity,

@@ -32,8 +32,12 @@ class WeatherAdapter : ListAdapter<WeatherItem, RecyclerView.ViewHolder>(weather
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
-            is ItemViewHolder -> holder.bind(getItem(position))
+            is ItemViewHolder -> holder.bind(getItem(position - 1))
         }
+    }
+
+    override fun getItemCount(): Int {
+        return currentList.size + 1
     }
 
     class ItemViewHolder(
