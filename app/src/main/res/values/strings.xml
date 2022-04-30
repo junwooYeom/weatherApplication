@@ -4,4 +4,7 @@
     <string name="iv_description">weather_icon</string>
 
     <string name="title_name">Local Weather</string>
+
+    <string name="text_degree">%d\u2103</string>
+    <string name="text_percentage">%d%%</string>
 </resources>

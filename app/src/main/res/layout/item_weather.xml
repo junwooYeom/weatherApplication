@@ -44,12 +44,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="0dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:text="@{weather.tomorrow.weatherStateName}"
                     android:maxLines="1"
                     android:ellipsize="end"
@@ -57,20 +59,21 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@{Double.toString(weather.today.theTemperature)}"
+                        android:text="@{String.format(@string/text_degree, Math.round(weather.today.theTemperature))}"
                         tools:text="12C"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
-                        android:text="@{Integer.toString(weather.today.humidity)}"
+                        android:text="@{String.format(@string/text_percentage, weather.today.humidity)}"
                         tools:text="18%"/>
 
                 </LinearLayout>
@@ -100,12 +103,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="0dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:text="@{weather.tomorrow.weatherStateName}"
                     android:maxLines="1"
                     android:ellipsize="end"
@@ -113,20 +118,21 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@{Double.toString(weather.tomorrow.theTemperature)}"
+                        android:text="@{String.format(@string/text_degree, Math.round(weather.tomorrow.theTemperature))}"
                         tools:text="12C"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
-                        android:text="@{Integer.toString(weather.tomorrow.humidity)}"
+                        android:text="@{String.format(@string/text_percentage, weather.today.humidity)}"
                         tools:text="18%"/>
 
                 </LinearLayout>
