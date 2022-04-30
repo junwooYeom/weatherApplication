@@ -3,10 +3,13 @@ package com.junwooyeom.weatherapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.junwooyeom.weatherapplication.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -26,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initRecyclerView()
-        observeLiveData()
+        subscribeFlow()
     }
 
     private fun initRecyclerView() {
@@ -37,10 +40,22 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
-    private fun observeLiveData() {
-        viewModel.liveData.observe(this) {
-            adapter.submitList(it)
+    private fun subscribeFlow() {
+        lifecycleScope.launch {
+            viewModel.state.collect {
+                when(it) {
+                    is WeatherState.Idle -> Unit
+                    is WeatherState.Loading -> Unit // progressBar 로딩
+                    is WeatherState.Refreshing -> Unit // swipeRefreshLayout 바 로딩
+                    is WeatherState.Weathers -> {
+                        // progressBar & SwipeRefreshLayout 뷰 GONE
+                        adapter.submitList(it.weather)
+                    }
+                    is WeatherState.Error -> {
+                        // handle Error
+                    }
+                }
+            }
         }
-        viewModel.getWeather()
     }
 }
