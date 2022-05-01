@@ -67,6 +67,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@{String.format(@string/text_degree, Math.round(weather.today.theTemperature))}"
+                        android:textColor="#800020"
+                        android:textStyle="bold"
                         tools:text="12C"/>
 
                     <TextView
@@ -74,6 +76,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:text="@{String.format(@string/text_percentage, weather.today.humidity)}"
+                        android:textStyle="bold"
                         tools:text="18%"/>
 
                 </LinearLayout>
@@ -126,6 +129,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@{String.format(@string/text_degree, Math.round(weather.tomorrow.theTemperature))}"
+                        android:textColor="#800020"
+                        android:textStyle="bold"
                         tools:text="12C"/>
 
                     <TextView
@@ -133,6 +138,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:text="@{String.format(@string/text_percentage, weather.today.humidity)}"
+                        android:textStyle="bold"
                         tools:text="18%"/>
 
                 </LinearLayout>

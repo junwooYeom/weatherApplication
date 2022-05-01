@@ -5,8 +5,8 @@
 
     <string name="title_name">Local Weather</string>
 
-    <string name="text_degree">%d\u2103</string>
-    <string name="text_percentage">%d%%</string>
+    <string name="text_degree"><b>%d</b>\u2103</string>
+    <string name="text_percentage"><b>%d</b>%%</string>
 
     <string name="state_error">날씨를 가져오는데 실패했습니다. Refresh 를 진행해주세요.</string>
 
