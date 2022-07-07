@@ -1,7 +1,5 @@
 # weatherApplication
 
-# 아이디어스 과제
-
 ## 사용 기술 스택
 
 ### 프로젝트 구성
